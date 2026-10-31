@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turizm Va Sayohat Agentligi</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h2 {
+        color: #006064;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Orqa fondagi video -->
+    <video autoplay muted loop id="orqa-fon-video">
+      <source src="media/fonvideo.mp4" type="video/mp4" />
+    </video>
+    <header>
+      <h1>Turizm Va Sayohat Agentligi</h1>
+      <nav>
+        <ul>
+          <li><a href="#haqida">Biz haqimizda</a></li>
+          <li><a href="#yonalishlar">Yo'nalishlar</a></li>
+          <li><a href="#narxlar">Narxlar</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#aloqa">Aloqa</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="haqida">
+        <h2>Biz haqimizda</h2>
+        <p>
+          Bizning agentlik orqali dunyoning eng go'zal shaharlariga qulay va
+          hamyonbop sayohat qiling
+        </p>
+
+        <h3>Yo'nalishlar</h3>
+        <ol>
+          <li>Samarqand va Buxoro bo'ylab tarixiy sayohat</li>
+          <li>Turkiya (Istanbul va Antaliya)</li>
+          <li>Misr (Qohira va Sharm al-Shayx)</li>
+        </ol>
+        <p>
+          <a href="media/katalog.pdf" target="_blank"
+            >Sayohatlar katalogi va narxlar (PDF yuklab olish)</a
+          >
+        </p>
+      </section>
+      <section id="narxlar">
+        <h2>Sayohat paketlari va narxlar</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Yo'nalish</th>
+              <th>Davomiyligi</th>
+              <th>Xizmatlar</th>
+              <th>Narxi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samarqand - Buxoro</td>
+              <td>4 kun / 3 kecha</td>
+              <td>Mehmonxona, Gid, Transport</td>
+              <td>1 500 000 so'm</td>
+            </tr>
+            <tr>
+              <td>Turkiya (Istanbul va Antaliya)</td>
+              <td>7 kun / 6 kecha</td>
+              <td>Mehmonxona, Gid, Transport</td>
+              <td>2 500 000 so'm</td>
+            </tr>
+            <tr>
+              <td>Misr (Qohira va Sharm al-Shayx)</td>
+              <td>6 kun / 5 kecha</td>
+              <td>Mehmonxona, Gid, Transport</td>
+              <td>2 000 000 so'm</td>
+            </tr>
+            <tr>
+              <td>Italiya (Rim va Florensiya)</td>
+              <td>8 kun / 7 kecha</td>
+              <td>Mehmonxona, Gid, Transport</td>
+              <td>3 000 000 so'm</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="media">
+        <h2>Sayohatdan lavhalar (Foto, Audio va Video)</h2>
+
+        <img src="media/sayohat.jpg" alt="Sayohat lavhasi 1" />
+        <img src="media/Arabiston.jpg" alt="Sayohat lavhasi 2" />
+
+        <h3>Sayohat atmosferasi (Audio)</h3>
+        <audio controls src="media/musiqa.mp3"></audio>
+
+        <h3>Video sharh</h3>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          src="media/video.mp4"
+        ></video>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          src="media/anqara.mp4"
+        ></video>
+      </section>
+
+      <section id="aloqa">
+        <h2>Sayohatga buyurtma berish</h2>
+        <form id="orderForm">
+          <label for="ism">Ismingiz:</label><br />
+          <input type="text" id="ism" name="ism" required /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="telefon">Telefon raqamingiz:</label><br />
+          <input type="tel" id="telefon" name="telefon" required /><br /><br />
+
+          <label for="yonalish">Yo'nalish tanlang:</label><br />
+          <select id="yonalish" name="yonalish" required>
+            <option value="">--Tanlang--</option>
+            <option value="samarqand_buxoro">Samarqand - Buxoro</option>
+            <option value="turkiya">Turkiya (Istanbul va Antaliya)</option>
+            <option value="misr">Misr (Qohira va Sharm al-Shayx)</option>
+            <option value="italiya">Italiya (Rim va Florensiya)</option></select
+          ><br /><br />
+
+          <button type="submit" class="tugma">Buyurtma berish</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>SamDU 302 - Guruh</p>
+    </footer>
+
+    <script src="bot.js"></script>
+  </body>
+</html>

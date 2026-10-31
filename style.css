@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#orqa-fon-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+header {
+  background-color: #0db9e0;
+  border-radius: 0 0 15px 15px;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+/* ASOSIY BO'LIMLAR (Keng va katta) */
+section {
+  background-color: rgba(251, 254, 255, 0.85);
+  width: 85%;          /* Ekranning 85 foizini egallaydi */
+  max-width: 1400px;   /* Katta monitorda 1400px gacha kengayadi */
+  margin: 30px auto;
+  padding: 35px 45px;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+section h2 {
+  font-size: 28px;
+  margin-top: 0;
+  color: #006064;
+}
+section h3 {
+  font-size: 22px;
+}
+
+/* Jadvalni katta va o'qishga qulay qilish */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  margin-top: 15px;
+}
+th,
+td {
+  border: 1px solid #006064;
+  padding: 14px 18px;
+}
+th {
+  background-color: #006064;
+  color: white;
+}
+/* Media bo'limidagi 2 ta rasm VA 2 ta video yonma-yon tekis turishi uchun */
+#media img,
+#media video {
+  width: 48.5%;
+  height: 350px;       /* Rasmlar va videolar bir xil 350px balandlikda chiqadi */
+  object-fit: cover;   /* Vertikal rasm ham cho'zilib ketmaydi */
+  border-radius: 12px;
+  border: 3px solid #006064;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1%;
+  margin-bottom: 15px;
+}
+#media audio {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0 25px 0;
+}
+#aloqa {
+  border-left: 8px solid #006064;
+}
+#aloqa form {
+  max-width: 600px;    /* Forma ham kengroq bo'ladi */
+  margin: 0 auto;
+  text-align: left;
+}
+#aloqa label {
+  font-weight: bold;
+  color: #006064;
+  font-size: 17px;
+}
+#aloqa input,
+#aloqa select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 2px solid #b2ebf2;
+  border-radius: 8px;
+  background-color: #f8fdff;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+#aloqa input:focus,
+#aloqa select:focus {
+  border-color: #006064;
+  box-shadow: 0 0 8px rgba(0, 96, 100, 0.3);
+  outline: none;
+  background-color: #ffffff;
+}
+.tugma {
+  background-color: #006064;
+  color: white;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+.tugma:hover {
+  background-color: #00838f;
+  transform: scale(1.02);
+}
+@keyframes suzish {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+img:hover {
+  animation: suzish 0.6s infinite alternate;
+}
+footer {
+  background-color: #006064;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 17px;
+  margin-top: 40px;
+}
+/* PLANSHETLAR UCHUN (Ekran 992px dan kichik bo'lsa) */
+@media (max-width: 992px) {
+  section {
+    width: 92%;
+    padding: 25px;
+  }
+  #media img,
+  #media video {
+    width: 100%;
+    height: 280px;
+    margin-right: 0;
+  }
+}
+/* TELEFONLAR UCHUN (Ekran 576px dan kichik bo'lsa) */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 22px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav a {
+    font-size: 15px;
+  }
+  section {
+    width: 96%;
+    padding: 16px;
+    margin: 15px auto;
+    font-size: 15px;
+  }
+  section h2 {
+    font-size: 22px;
+  }
+  #media img,
+  #media video {
+    height: 220px;
+  }
+  table {
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding: 8px;
+  }
+}
